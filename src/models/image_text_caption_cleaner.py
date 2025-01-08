@@ -47,7 +47,7 @@ class ImageTextCaptionCleaner:
         self.batch_size = batch_size
         self.frame_interval = frame_interval
 
-    def process_video(self, video: VideoRecord):
+    def process_video(self, video: VideoRecord):##video record gives path(name),start frame,num_frames,label
         video_name = Path(video.path).name
         frames_per_clip = int(self.clip_duration * self.fps)
         video_captions_retrieved = defaultdict(dict)
